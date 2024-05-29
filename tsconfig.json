@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "module": "CommonJS",
+    "skipLibCheck": true,
+
+    // Build options
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "outDir": "./dist",
+    "sourceMap": false,
+    "esModuleInterop": true,
+
+    // Linting
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "allowJs": false,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["./src", "vite.config.ts", "dts-bundle-generator.config.ts"]
+}
