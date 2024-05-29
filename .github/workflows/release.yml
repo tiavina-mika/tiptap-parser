@@ -1,0 +1,50 @@
+# doc: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+name: Publish Package to npmjs
+run-name: ${{ github.actor }} publish to npm 🚀
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: Grim #your environment name
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # need this for using yarn
+      - name: Enable Corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+          # instead of using the local cache in .yarn folder, since it's in .gitignore
+          cache: 'yarn'
+
+      - name: Replace branch name in branches array
+        run: sed -i 's|'current-branch'|'${{ github.ref_name }}'|' .releaserc
+        
+      - name: Install dependencies
+        run: yarn
+
+      # for Yarn v1, use `yarn publish` instead
+      # - run: yarn npm publish // if using yarn
+      - name: Release
+        env:
+          # this will be used in .yarnrc.yml
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
