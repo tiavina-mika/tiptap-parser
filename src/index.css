@@ -1,0 +1,9 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css';
+
+.code-container {
+  font-size: 0.75rem/* 12px */;
+  line-height: 1em;
+  border-radius: 0.375rem/* 6px */;
+  padding-top: 1.5rem/* 24px */ !important;
+  padding-bottom: 1.5rem/* 24px */ !important;
+}
