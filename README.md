@@ -34,7 +34,7 @@ If you are using a dev oriented blog like Medium, this library is for you.
 ## Demo
 Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/tiptap-parser-demo)**
 
-<img alt="Screenshot" src="https://github.com/tiavina-mika/mui-tiptap-editor/blob/main/screenshots/screenshot.png" />
+<img alt="Screenshot" src="https://github.com/tiavina-mika/tiptap-parser/blob/main/screenshots/screenshot.png" />
 
 ## Installation
 
