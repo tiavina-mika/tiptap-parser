@@ -12,162 +12,44 @@ import './index.css';
 import parse, { HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact } from 'html-react-parser';
 import { common, createLowlight } from 'lowlight'
 import { toHtml } from 'hast-util-to-html'
-import html from 'htmlparser-to-html';
-import { parse as nodeParse } from 'node-html-parser';
-import { createHighlightPlugin } from 'prosemirror-highlight'
-import { createParser } from 'prosemirror-highlight/lowlight'
+import { ElementType } from 'react';
 
 const lowlight = createLowlight(common);
 
-// const parseTest = (children) => {
-//   console.log('children: ', children);
-//   // console.log('children: ', children);
-//   // const codeStr = domToReact(children as DOMNode[]) as string;
-//   const str = children.map((child) => {
-//     // console.log('child: ', child);
-//     if (child.children && child.children.length > 0) {
-//       const str2 = child.children.map((child2) => {
-//         if (child2.children && child2.children.length > 0) {
-//           return `<${child2.name}>${child2.children.map((child3) => child3.data).join('')}</${child2.name}>`
-//         } else {
-//           return child2.data || '';
-//         }
-//       })
-//       return str2
-//       // return `<${child.name}>${child.data}</${child.name}>`
-//       // return `<${child.name}>${parseTest(child.children)}</${child.name}>`
-//     } else {
-//       return child.data || '';
-//     }
-//   })
-//   // // console.log('codeStr: ', codeStr);
-//   return str.join('');
-// }
-function formatItem(text, searchText){
-  const search = new RegExp(searchText, 'iu')
-  return text?.toString().replace(search, (m) => `${m}`)
-}
-const repl = (str1, str2) => {
-  if (str1 === str2.toLowerCase()) {
-    return str2;
-  }
+export type ClassNamesProps = {
+  codeClassName?: string;
+  h1ClassName?: string;
+  h2ClassName?: string;
+  h3ClassName?: string;
+  h4ClassName?: string;
+  h5ClassName?: string;
+  h6ClassName?: string;
+  pClassName?: string;
+  ulClassName?: string;
+  liClassName?: string;
+  spanClassName?: string;
+  divClassName?: string;
+  aClassName?: string;
+  tableClassName?: string;
+  imageClassName?: string;
+};
 
-  return str1;
-}
-// const ex = '<h1>cool</h1><HtmlCodeParser></HtmlCodeParser>language="tsx" />'
-const ex = `
-<h1>Here is an exemple of code</h1>
-<p>This is a stringified html with code</p>
-<br/>
-<pre>
-<code>
-const App = () => {
-  return (
-    <div>
-      {parseHtml(html, { language: 'tsx' })}
-      <HtmlCodeParser language="tsx" codeContainerClassName="custom-class">
-        {html}
-      </HtmlCodeParser>
-    </div>
-  )
-}
-</code></pre>
-`
-const replaceStr2 = (text, search) => {
-  const v = text.search(new RegExp(search, 'ig'))
-  // let result = ex.slice(v - 1)
-  const next = ex.substring(v);
-  const spaceAfter = next.split(' ');
-  // console.log('spaceAfter: ', spaceAfter);
-  // if (spaceAfter.length > 1 && spaceAfter[1].length > 1) {
-  //   const copy = [...spaceAfter];
-  //   copy.shift();
-  //   return spaceAfter[1]
-  // }
-  return next.split(/[\s\/>]+/)[0]
-}
+const parseHtml = (
+  /**
+   * The stringified html to be parsed (to HTML).
+   * example: `<p><h1>Hello there</h1><code>console.log('Hello, World!')</code></p>`
+   */
+  text: string,
+  classNames?: ClassNamesProps,
+  language = 'javascript',
+  options?: HTMLReactParserOptions
+) => {
+  const { codeClassName } = classNames || {};
+  /**
+   * Parse the html string content and highlight the code snippets
+   */
 
-const isType = (arr) => {
-  if (arr[1]) {
-    return arr[1][0] === '(';
-  }
-
-  return false;
-}
-const replaceStr = (text, search) => {
-  const v = text.search(new RegExp(search, 'ig'))
-  const next = text.substring(v);
-  const spaceAfter2 = next.split('>');
-  console.log('spaceAfter2: ', spaceAfter2);
-  // console.log('next: ', next);
-
-  if (spaceAfter2.length > 0 && spaceAfter2[0].length > 1 && !isType(spaceAfter2)) {
-    return  spaceAfter2[0];
-  }
-
-  return next.split(/[\s\/>]+/)[0]
-}
-
-// console.log(replaceStr2(ex, 'htmlcodeparser'));
-
-// console.log('resul2t: ', next.substring(v, next.search(new RegExp('/\//', 'ig'))));
-// console.log('result: ', next.substring(v, ex.search(new RegExp('/\s|\/|>/', 'ig'))));
-
-// const format =
-
-// const v = ex.match(new RegExp('htmlcodeparser'))
-// console.log('v: ', formatItem(ex, 'htmlcodeparser'));
-
-const parseTest = (children, mainText) => {
-  // console.log('mainText: ', mainText);
-  // console.log('children: ', children);
-  // console.log('children: ', children);
-  // const codeStr = domToReact(children as DOMNode[]) as string;
-  const str = children.map((child) => {
-    // console.log('child: ', child);
-    if (child.children && child.children.length > 0) {
-      // const str2 = child.children.map((child2) => {
-      //   if (child2.children && child2.children.length > 0) {
-      //     return `<${child2.name}>${child2.children.map((child3) => child3.data).join('')}</${child2.name}>`
-      //   } else {
-      //     return child2.data || '';
-      //   }
-      // })
-      // console.log('child.children: ', child);
-      // return str2
-      // return `<${child.name}>${child.data}</${child.name}>`
-      // const element = formatItem(mainText, child.data, child.name)
-      // console.log('element: ', element);
-      // console.log('v: ', v, '-', child.name);
-      const start = replaceStr(mainText, child.name)
-      const end = replaceStr(mainText, child.name).split(' ')[0];
-
-
-      // console.log('element: ', element);
-
-      return `<${start}>${parseTest(child.children, mainText)}</${end}>`
-    } else {
-      if (child.type === 'comment' && child.data.includes('br')) {
-        console.log('child.name: ', child.name);
-        return '</ br>';
-      }
-      return child.data || '';
-    }
-  })
-  // // console.log('codeStr: ', codeStr);
-  return str.join('');
-}
-
-// const getString = (htmlStr: string) => {
-//   const root = nodeParse(htmlStr);
-//   const codeStrs2 = html(root.getElementsByTagName('pre'));
-//   const tree = lowlight.highlight('javascript', codeStrs2.replace(/<pre>|<\/pre>|<code>|<\/code>/ig, ''));
-// }
-// ------------------------------ //
-// ---- use it as a function ---- //
-// ------------------------------ //
-const getOptions = (language: string, codeContainerClassName?: string, mainText?: string): HTMLReactParserOptions => {
-  return {
+  const defaultOptions = {
     /**
      * Replace the `<code>` with the highlighted code snippet
      * the string content of the `<code>` tag is transformed to stringified html using the lowlight library
@@ -180,91 +62,68 @@ const getOptions = (language: string, codeContainerClassName?: string, mainText?
      */
     replace(domProps: DOMNode) {
       const { name, children, attribs } = domProps as Element;
+      const Component = name as ElementType;
 
-      // replace only <code> elements
-      if (name === 'code') {
-      // console.log('domProps: ', domProps);
-
-        // Convert DOM attributes to React props
+      if (name) {
         const props = attributesToProps(attribs);
-        // console.log('toHtml(children): ',domProps);
-        // Replace the element children
-        const options = getOptions(language, codeContainerClassName);
-        // const codeStr = domToReact(children as DOMNode[], options) as string;
-        // console.log('codeStr: ', codeStr);
-        // console.log('children: ', children);
-        // console.log('children: ', children);
 
-        const codeStrs = html(children);
-        // console.log('codeStrs: ', codeStrs);
-        // console.log('codeStrs2: ', codeStrs2);
-        // const root = nodeParse(html);
+        // do not replace the `<pre>` tag
+        if (name === 'pre') return
 
-        // console.log('children: ', children.map((child) => child.data).join(''));
-        // console.log('codeStr: ', codeStr);
+        /**
+         * Replace the `<code>` tag with the highlighted code snippet
+         * with the `hljs` class name to apply the highlight theme (see: https://highlightjs.org/examples/)
+         */
+        if (name === 'code') {
+          const codeStr = domToReact(children as DOMNode[]) as string;
+          const tree = lowlight.highlight(language, codeStr);
+          return (
+            <code className={`hljs code-container ${codeClassName || ''}`} {...props}>
+              {parse(toHtml(tree))}
+            </code>
+          );
+        }
 
-        const codeStr3  = parseTest(children, mainText)
-        console.log('children: ', children);
+        if (name === 'image') {
+          return <Component {...props} className={classNames?.imageClassName || ''} />;
+        }
 
-        const tree = lowlight.highlight(language, codeStr3);
-        // const tree = lowlight.highlight(language, children.map((child) => child.data).join(''));
+        if (['br', 'hr', 'img'].find((currentName: string) => currentName === name)) {
+            return <Component {...props} />;
+        }
+
         return (
-          // editor container
-          <code className={`hljs code-container ${codeContainerClassName || ''}`} {...props}>
-            {parse(toHtml(tree))}
-          </code>
+          <Component className={(classNames as any)?.[`${name}ClassName`] || ''} {...props}>
+            {domToReact(children as DOMNode[])}
+          </Component>
         );
       }
-    },
-  }
-};
-
-export type HtmlCodeParserOptions = {
-  /*
-  *
-  * Specify the programming language of the code snippet that
-  * will be displayed in the `ReadOnlyTextCodeEditor` component. By default, the `language` prop is set to
-  * `'jsx'`, but it can be overridden when using the component by passing a different language value.
-  *
-  * for more language options, visit: https://github.com/wooorm/lowlight?tab=readme-ov-file#data
-  */
-  language?: string;
-  codeContainerClassName?: string;
-};
-
-const parseHtml = (
-  /**
-   * The stringified html to be parsed (to HTML).
-   * example: `<p><h1>Hello there</h1><code>console.log('Hello, World!')</code></p>`
-   */
-  text: string,
-  options?: HtmlCodeParserOptions
-) => {
-  const { codeContainerClassName, language = 'javascript' } = options || {};
+    }
+  };
 
   /*
   * If the `<code>` tag is not found in the html string content
   * it means that there are no code snippets to be highlighted.
   */
-  if (!text.includes('<code>')) {
-    return parse(text);
-  };
+  return parse(text, { ...defaultOptions, ...options });
 
-  /**
-   * Parse the html string content and highlight the code snippets
-   */
-  return parse(text, getOptions(language, codeContainerClassName, text));
 }
 
 // ------------------------------ //
 // ----- use it as component ---- //
 // ------------------------------ //
-type Props = {
+export type TiptapProps = {
   children: string;
-} & HtmlCodeParserOptions;
-
-export const HtmlCodeParser = ({ codeContainerClassName, language, children }: Props) => {
-  return parseHtml(children, { codeContainerClassName, language })
+  classNames?: ClassNamesProps;
+  language?: string;
+  containerClassName?: string;
+} & HTMLReactParserOptions;
+const TiptapParser = ({ classNames, containerClassName, language, children, ...rest }: TiptapProps) => {
+  return (
+    <div className={containerClassName}>
+      {parseHtml(children, classNames, language, rest)}
+    </div>
+  )
 }
 
-export default parseHtml;
+export default TiptapParser;
