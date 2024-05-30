@@ -1,5 +1,5 @@
 {
-  "name": "app-using-tiptap-code-parser",
+  "name": "app-using-tiptap-parser",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,10 @@
     "lint": "eslint . --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "clean-cache": "yarn cache clean --all",
-    "upgrade": "yarn add tiptap-code-parser@latest"
+    "upgrade": "yarn add tiptap-parser@latest"
   },
   "dependencies": {
-    "tiptap-code-parser": "^0.0.3",
+    "tiptap-parser": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
