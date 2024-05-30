@@ -1,8 +1,8 @@
-# tiptap-code-parser
+# tiptap-parser
 
 <p  align="center">
 
-<b>tiptap-code-parser</b>: HTML parser to React component built on the top of  <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
+<b>tiptap-parser</b>: HTML parser to React component built on the top of  <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
 
 </p>
 
@@ -25,7 +25,7 @@
 
 ## Demo
 
-Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/tiptap-code-parser-demo)**
+Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/tiptap-parser-demo)**
 
 <img alt="Screenshot" src="https://github.com/tiavina-mika/mui-tiptap-editor/blob/main/screenshots/screenshot.png" />
 
@@ -110,4 +110,4 @@ const App = () => {
 
 ## Contributing
 
-Get started [here](https://github.com/tiavina-mika/tiptap-code-parser/blob/main/CONTRIBUTING.md).
+Get started [here](https://github.com/tiavina-mika/tiptap-parser/blob/main/CONTRIBUTING.md).
