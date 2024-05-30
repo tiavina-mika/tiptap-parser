@@ -6,7 +6,7 @@ _Pull requests, bug reports, and all other forms of contribution are welcomed an
 
 ### GitHub issues
 
-If you encounter a problem with this library or if you have a new feature you'd like to see in this project, please create [a new issue](https://github.com/tiavina-mika/tiptap-code-parser/issues/new/choose).
+If you encounter a problem with this library or if you have a new feature you'd like to see in this project, please create [a new issue](https://github.com/tiavina-mika/tiptap-parser/issues/new/choose).
 
 ### GitHub pull requests
 
