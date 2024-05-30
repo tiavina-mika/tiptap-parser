@@ -1,4 +1,4 @@
-import { parseHtml, HtmlCodeParser } from "tiptap-code-parser";
+import { parseHtml, HtmlCodeParser } from "tiptap-parser";
 
 // const html = `<p><h1>Hello there</h1><code>console.log("Using it as a component")</code></p>`;
 const html = `
