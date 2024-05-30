@@ -5030,15 +5030,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"he@npm:1.2.0":
-  version: 1.2.0
-  resolution: "he@npm:1.2.0"
-  bin:
-    he: bin/he
-  checksum: 10c0/a27d478befe3c8192f006cdd0639a66798979dfa6e2125c6ac582a19a5ebfec62ad83e8382e6036170d873f46e4536a7e795bf8b95bf7c247f4cc0825ccc8c17
-  languageName: node
-  linkType: hard
-
 "highlight.js@npm:^10.7.1":
   version: 10.7.3
   resolution: "highlight.js@npm:10.7.3"
@@ -5068,58 +5059,6 @@ __metadata:
   checksum: 10c0/b19dbd92d3c0b4b0f1513cf79b0fc189f54d6af2129eeb201de2e9baaa711f1936929c848b866d9c8667a0f956f34bf4f07418c12be1ee9ca74fd9246335ca1f
   languageName: node
   linkType: hard
-
-"tiptap-code-parser@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "tiptap-code-parser@workspace:."
-  dependencies:
-    "@semantic-release/changelog": "npm:^6.0.3"
-    "@semantic-release/commit-analyzer": "npm:^12.0.0"
-    "@semantic-release/git": "npm:^10.0.1"
-    "@semantic-release/github": "npm:^10.0.3"
-    "@semantic-release/npm": "npm:^12.0.0"
-    "@semantic-release/release-notes-generator": "npm:^13.0.0"
-    "@types/react": "npm:^18.2.43"
-    "@types/react-dom": "npm:^18.2.17"
-    "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
-    "@typescript-eslint/parser": "npm:^6.20.0"
-    "@vitejs/plugin-react": "npm:^4.2.1"
-    babel-plugin-module-resolver: "npm:^5.0.0"
-    copyfiles: "npm:^2.4.1"
-    cspell: "npm:^6.31.1"
-    eslint: "npm:^8.56.0"
-    eslint-config-airbnb: "npm:^19.0.4"
-    eslint-config-airbnb-typescript: "npm:^17.1.0"
-    eslint-config-next: "npm:^14.0.0"
-    eslint-config-prettier: "npm:^9.1.0"
-    eslint-plugin-eslint-comments: "npm:^3.2.0"
-    eslint-plugin-prefer-arrow-functions: "npm:^3.2.4"
-    eslint-plugin-prettier: "npm:^5.1.3"
-    eslint-plugin-react-hooks: "npm:^4.6.0"
-    eslint-plugin-react-refresh: "npm:^0.4.5"
-    hast-util-to-html: "npm:^9.0.1"
-    html-react-parser: "npm:^5.1.10"
-    htmlparser-to-html: "npm:^0.0.6"
-    lowlight: "npm:3.1.0"
-    markdown-link-check: "npm:^3.12.1"
-    node-html-parser: "npm:^6.1.13"
-    prettier: "npm:^3.2.2"
-    prettier-plugin-organize-imports: "npm:^3.2.4"
-    prosemirror-highlight: "npm:^0.6.0"
-    prosemirror-view: "npm:^1.33.6"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    rimraf: "npm:^5.0.5"
-    semantic-release: "npm:^23.0.8"
-    ts-add-js-extension: "npm:^1.6.4"
-    typescript: "npm:^5.2.2"
-    vite: "npm:5.0.8"
-    vite-tsconfig-paths: "npm:^4.3.1"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.2 || ^18.2.0
-    react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0
-  languageName: unknown
-  linkType: soft
 
 "html-dom-parser@npm:5.0.8":
   version: 5.0.8
@@ -5162,13 +5101,6 @@ __metadata:
   version: 3.0.0
   resolution: "html-void-elements@npm:3.0.0"
   checksum: 10c0/a8b9ec5db23b7c8053876dad73a0336183e6162bf6d2677376d8b38d654fdc59ba74fdd12f8812688f7db6fad451210c91b300e472afc0909224e0a44c8610d2
-  languageName: node
-  linkType: hard
-
-"htmlparser-to-html@npm:^0.0.6":
-  version: 0.0.6
-  resolution: "htmlparser-to-html@npm:0.0.6"
-  checksum: 10c0/158db3dfb009b0b5b7cd0409b381ea6bb3db14383a7367f90eba96e41dea23f093bbec6da020b2ad7c4e20f2f8d7ddf3a7844075cbb024a9a5ea40e44a2f19a6
   languageName: node
   linkType: hard
 
@@ -6820,16 +6752,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-html-parser@npm:^6.1.13":
-  version: 6.1.13
-  resolution: "node-html-parser@npm:6.1.13"
-  dependencies:
-    css-select: "npm:^5.1.0"
-    he: "npm:1.2.0"
-  checksum: 10c0/ca36290507da8ec0fa131a0fd67ba62e300365c3950b5a6058b0e32b71b520ff43a5661b19e98a5c9797dbe3428b08db788b602f1f8aa62f2db5bb66e1d80782
-  languageName: node
-  linkType: hard
-
 "node-releases@npm:^2.0.14":
   version: 2.0.14
   resolution: "node-releases@npm:2.0.14"
@@ -7208,13 +7130,6 @@ __metadata:
     type-check: "npm:^0.4.0"
     word-wrap: "npm:^1.2.5"
   checksum: 10c0/4afb687a059ee65b61df74dfe87d8d6815cd6883cb8b3d5883a910df72d0f5d029821f37025e4bccf4048873dbdb09acc6d303d27b8f76b1a80dd5a7d5334675
-  languageName: node
-  linkType: hard
-
-"orderedmap@npm:^2.0.0":
-  version: 2.1.1
-  resolution: "orderedmap@npm:2.1.1"
-  checksum: 10c0/8d7d266659d1828937046e8b2a7b5f75914e0391db985da0ca75cd2246cccbf6d6f3a0886aa2034da15ee4923e8c45f95f8b588f575f535f0adecdefccc54634
   languageName: node
   linkType: hard
 
@@ -7778,88 +7693,6 @@ __metadata:
   version: 6.5.0
   resolution: "property-information@npm:6.5.0"
   checksum: 10c0/981e0f9cc2e5acdb414a6fd48a99dd0fd3a4079e7a91ab41cf97a8534cf43e0e0bc1ffada6602a1b3d047a33db8b5fc2ef46d863507eda712d5ceedac443f0ef
-  languageName: node
-  linkType: hard
-
-"prosemirror-highlight@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "prosemirror-highlight@npm:0.6.0"
-  peerDependencies:
-    "@types/hast": ^3.0.0
-    highlight.js: ^11.9.0
-    lowlight: ^3.1.0
-    prosemirror-model: ^1.19.3
-    prosemirror-state: ^1.4.3
-    prosemirror-transform: ^1.8.0
-    prosemirror-view: ^1.32.4
-    refractor: ^4.8.1
-    shiki: ^1.0.0
-    shikiji: ^0.8.0 || ^0.9.0 || ^0.10.0
-    sugar-high: ^0.6.1
-  peerDependenciesMeta:
-    "@types/hast":
-      optional: true
-    highlight.js:
-      optional: true
-    lowlight:
-      optional: true
-    prosemirror-model:
-      optional: true
-    prosemirror-state:
-      optional: true
-    prosemirror-transform:
-      optional: true
-    prosemirror-view:
-      optional: true
-    refractor:
-      optional: true
-    shiki:
-      optional: true
-    shikiji:
-      optional: true
-    sugar-high:
-      optional: true
-  checksum: 10c0/5caa340b51598b4535034bc8e9cfaeeee07c4893197445a2f2dce466cf9920ced9e5073ce03680d41a3267cd6173d0b462e06c44bd32c6095ede3c3c73526954
-  languageName: node
-  linkType: hard
-
-"prosemirror-model@npm:^1.0.0, prosemirror-model@npm:^1.20.0, prosemirror-model@npm:^1.21.0":
-  version: 1.21.0
-  resolution: "prosemirror-model@npm:1.21.0"
-  dependencies:
-    orderedmap: "npm:^2.0.0"
-  checksum: 10c0/ec0d23540b816e4c292698030fe5d1ce827ec9dcd1c785f95a70e67c5ebda4b0f1d714a7ff8ecdb49ad97b864b4bcaa20e00e50533639c303a1662eaeb83b834
-  languageName: node
-  linkType: hard
-
-"prosemirror-state@npm:^1.0.0":
-  version: 1.4.3
-  resolution: "prosemirror-state@npm:1.4.3"
-  dependencies:
-    prosemirror-model: "npm:^1.0.0"
-    prosemirror-transform: "npm:^1.0.0"
-    prosemirror-view: "npm:^1.27.0"
-  checksum: 10c0/e34dc9b1a6b23c23265569b2c246aaef4a61353a5fd33e933b62528917603382271d9f7d5212094e8928dee9bb4827e25a583104d43745e6ab3b8cbde12170f5
-  languageName: node
-  linkType: hard
-
-"prosemirror-transform@npm:^1.0.0, prosemirror-transform@npm:^1.1.0":
-  version: 1.9.0
-  resolution: "prosemirror-transform@npm:1.9.0"
-  dependencies:
-    prosemirror-model: "npm:^1.21.0"
-  checksum: 10c0/8832d825a9d38fd116f5c3fbc9708f3aa627f88980efbc1923524da7673f5bd9d7ed0032762f5be223d990176a759b2ae0a5f3ba67bffd596c028ddbc0d53b93
-  languageName: node
-  linkType: hard
-
-"prosemirror-view@npm:^1.27.0, prosemirror-view@npm:^1.33.6":
-  version: 1.33.6
-  resolution: "prosemirror-view@npm:1.33.6"
-  dependencies:
-    prosemirror-model: "npm:^1.20.0"
-    prosemirror-state: "npm:^1.0.0"
-    prosemirror-transform: "npm:^1.1.0"
-  checksum: 10c0/bec6edb8397f679056014d53efc84e1f64e63b329363d7ec7d8683d242dfeb25eed0c318b6362e416ad64c64a0de9b0855b40b43f9b6fa1c8f4517ef40ded61b
   languageName: node
   linkType: hard
 
@@ -9044,6 +8877,54 @@ __metadata:
   checksum: 10c0/70a0818793bd00345771a4ddfa9e339c102f891766c5ebce6a011905a1a20e30212851c9ffb11b52b79e2445be32bc21d164c4c6d317aef730766b2a61008f30
   languageName: node
   linkType: hard
+
+"tiptap-parser@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "tiptap-parser@workspace:."
+  dependencies:
+    "@semantic-release/changelog": "npm:^6.0.3"
+    "@semantic-release/commit-analyzer": "npm:^12.0.0"
+    "@semantic-release/git": "npm:^10.0.1"
+    "@semantic-release/github": "npm:^10.0.3"
+    "@semantic-release/npm": "npm:^12.0.0"
+    "@semantic-release/release-notes-generator": "npm:^13.0.0"
+    "@types/react": "npm:^18.2.43"
+    "@types/react-dom": "npm:^18.2.17"
+    "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
+    "@typescript-eslint/parser": "npm:^6.20.0"
+    "@vitejs/plugin-react": "npm:^4.2.1"
+    babel-plugin-module-resolver: "npm:^5.0.0"
+    copyfiles: "npm:^2.4.1"
+    cspell: "npm:^6.31.1"
+    eslint: "npm:^8.56.0"
+    eslint-config-airbnb: "npm:^19.0.4"
+    eslint-config-airbnb-typescript: "npm:^17.1.0"
+    eslint-config-next: "npm:^14.0.0"
+    eslint-config-prettier: "npm:^9.1.0"
+    eslint-plugin-eslint-comments: "npm:^3.2.0"
+    eslint-plugin-prefer-arrow-functions: "npm:^3.2.4"
+    eslint-plugin-prettier: "npm:^5.1.3"
+    eslint-plugin-react-hooks: "npm:^4.6.0"
+    eslint-plugin-react-refresh: "npm:^0.4.5"
+    hast-util-to-html: "npm:^9.0.1"
+    html-react-parser: "npm:^5.1.10"
+    lowlight: "npm:3.1.0"
+    markdown-link-check: "npm:^3.12.1"
+    prettier: "npm:^3.2.2"
+    prettier-plugin-organize-imports: "npm:^3.2.4"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    rimraf: "npm:^5.0.5"
+    semantic-release: "npm:^23.0.8"
+    ts-add-js-extension: "npm:^1.6.4"
+    typescript: "npm:^5.2.2"
+    vite: "npm:5.0.8"
+    vite-tsconfig-paths: "npm:^4.3.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.2 || ^18.2.0
+    react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0
+  languageName: unknown
+  linkType: soft
 
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
