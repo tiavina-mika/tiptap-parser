@@ -2,7 +2,7 @@
 
 <p  align="center">
 
-<b>tiptap-parser</b>: HTML parser to React component built on the top of  <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
+<b>tiptap-parser</b>: HTML parser for Tiptap <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
 
 </p>
 
@@ -64,8 +64,6 @@ function App() {
 #### Content with code
 
 ```tsx
-import TiptapParser from "tiptap-parser";
-
 const html = `<><h1>Hello there</h1><code>console.log("Log something here")</code></>`;
 
 function App() {
@@ -80,24 +78,18 @@ function App() {
 #### Customization
 
 ```tsx
-import { HtmlCodeParser } from '../Parse'
-
 const html = `<p><h1>Hello there</h1></p>`;
 
-const App = () => {
-  return (
-    <TiptapParser
-      classNames={{
-        codeClassName: 'p-6',
-        h1ClassName: 'text-xl',
-        aClassName: 'underline',
-        pClassName: 'text-gray-400'
-      }}
-    />
-      {html}
-    </TiptapParser>
-  )
-}
+<TiptapParser
+  classNames={{
+    codeClassName: 'p-6',
+    h1ClassName: 'text-xl',
+    aClassName: 'underline',
+    pClassName: 'text-gray-400'
+  }}
+/>
+  {html}
+</TiptapParser>
 ```
 
 ## Props
