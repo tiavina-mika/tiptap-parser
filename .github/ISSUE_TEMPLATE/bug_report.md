@@ -14,7 +14,7 @@ Before filing a bug, please confirm that you have:
 
 ### To Reproduce
 
-Please include a CodeSandbox demo of the problem if possible. (You can fork [this CodeSandbox](https://codesandbox.io/p/github/tiavina-mika/tiptap-code-parser-demo).)
+Please include a CodeSandbox demo of the problem if possible. (You can fork [this CodeSandbox](https://codesandbox.io/p/github/tiavina-mika/tiptap-parser-demo).)
 
 Steps to reproduce the behavior:
 
@@ -32,7 +32,7 @@ If applicable, add screenshots to help explain your problem.
 
 ### System (please complete the following information)
 
-- tiptap-code-parser version: [e.g. 2.0.0]
+- tiptap-parser version: [e.g. 2.0.0]
 - Browser: [e.g. Chrome, Firefox]
 - Node version: [e.g 16.4.2]
 - React version: [e.g 18.0.2]
