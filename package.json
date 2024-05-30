@@ -1,6 +1,6 @@
 {
-  "name": "tiptap-code-parser",
-  "version": "0.0.7",
+  "name": "tiptap-parser",
+  "version": "0.0.1",
   "description": "HTML parser to React component built on the top of html-react-parser with code syntax highlighting",
   "keywords": [
     "tiptap",
@@ -15,9 +15,9 @@
     "html-react-parser",
     "code editor"
   ],
-  "homepage": "https://github.com/tiavina-mika/tiptap-code-parser",
+  "homepage": "https://github.com/tiavina-mika/tiptap-parser",
   "bugs": {
-    "url": "https://github.com/tiavina-mika/tiptap-code-parser/issues"
+    "url": "https://github.com/tiavina-mika/tiptap-parser/issues"
   },
   "author": {
     "name": "Tiavina Michael Ralainirina",
@@ -66,11 +66,7 @@
   "dependencies": {
     "hast-util-to-html": "^9.0.1",
     "html-react-parser": "^5.1.10",
-    "htmlparser-to-html": "^0.0.6",
-    "lowlight": "3.1.0",
-    "node-html-parser": "^6.1.13",
-    "prosemirror-highlight": "^0.6.0",
-    "prosemirror-view": "^1.33.6"
+    "lowlight": "3.1.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.2 || ^18.2.0",
