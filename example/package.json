@@ -12,9 +12,9 @@
     "upgrade": "yarn add tiptap-parser@latest"
   },
   "dependencies": {
-    "tiptap-parser": "^0.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tiptap-parser": "^0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

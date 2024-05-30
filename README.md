@@ -33,13 +33,14 @@ Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/githu
 
 ```shell
 
-npm  install  html-code-editor
+npm  install  tiptap-parser
 
 ```
 or
 ```shell
 
-yarn  add  html-code-editor
+yarn  add  tiptap-parser
+```
 
 
 ## Get started
@@ -47,66 +48,83 @@ yarn  add  html-code-editor
 #### Simple usage
 
 ```tsx
-import parseHtml from 'html-code-editor';
+import TiptapParser from "tiptap-parser";
 
-const html = `<p><h1>Hello there</h1><code>console.log("Using it as a component")</code></p>`;
+const html = `<h1>Hello world</h1>`;
 
 function App() {
   return (
-    <div>
-      {parseHtml(html)}
-    </div>
+    <TiptapParser>
+      {html}
+    </TiptapParser>
   );
 }
 ```
 
-#### Using as a component
+#### Content with code
+
 ```tsx
-import { HtmlCodeParser } from '../Parse'
+import TiptapParser from "tiptap-parser";
 
-const html = `<p><h1>Hello there</h1><code>console.log("Using it as a component")</code></p>`;
+const html = `<><h1>Hello there</h1><code>console.log("Log something here")</code></>`;
 
-const App = () => {
+function App() {
   return (
-    <HtmlCodeParser language="typescript" codeContainerClassName="custom-class">
+    <TiptapParser language="typescript">
       {html}
-    </HtmlCodeParser>
-  )
+    </TiptapParser>
+  );
 }
 ```
 
-
-## Language
-
-<p>By default it's use <code>Javascript</code></p>
+#### Customization
 
 ```tsx
-  parseHtml(html, { language: 'php' })
-```
-```tsx
-  <HtmlCodeParser language="php">
-    {html}
-  </HtmlCodeParser>
-```
+import { HtmlCodeParser } from '../Parse'
 
-## Customization
-```tsx
-  parseHtml(html, { codeContainerClassName: 'bg-gray-300' })
-```
-```tsx
-  <HtmlCodeParser codeContainerClassName="bg-gray-300">
-    {html}
-  </HtmlCodeParser>
-```
+const html = `<p><h1>Hello there</h1></p>`;
 
+const App = () => {
+  return (
+    <TiptapParser
+      classNames={{
+        codeClassName: 'p-6',
+        h1ClassName: 'text-xl',
+        aClassName: 'underline',
+        pClassName: 'text-gray-400'
+      }}
+    />
+      {html}
+    </TiptapParser>
+  )
+}
+```
 
 ## Props
 
 |props |type                          | Default value                         | Description |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
-|children|`string[]`| empty | html string
-|codeContainerClassName|`string`|empty| styles of the code container
-|language|`string`|empty| language of the code ((see the list)[https://github.com/wooorm/lowlight?tab=readme-ov-file#data])
+|containerClassName|`string`|empty| styles of the container
+|classNames|`ClassNameProps`|empty| class names of each element withing the container
+|language|`string`|empty| language of the code. [see the list](https://github.com/wooorm/lowlight?tab=readme-ov-file#data)
+
+### classNames Props
+|props |type                          | Default value                         | Description |
+|----------------|-------------------------------|-----------------------------|-----------------------------|
+|codeClassName|`string`|empty| class name of code element
+|h1ClassName|`string`|empty| class name of h1 element
+|h2ClassName|`string`|empty| class name of h2 element
+|h3ClassName|`string`|empty| class name of h3 element
+|h4ClassName|`string`|empty| class name of h4 element
+|h5ClassName|`string`|empty| class name of h5 element
+|h6ClassName|`string`|empty| class name of h6 element
+|pClassName|`string`|empty| class name of p element
+|ulClassName|`string`|empty| class name of ul element
+|spanClassName|`string`|empty| class name of span element
+|divClassName|`string`|empty| class name of div element
+|aClassName|`string`|empty| class name of a element
+|tableClassName|`string`|empty| class name of table element
+|imageClassName|`string`|empty| class name of image element
 
 ## Contributing
 
