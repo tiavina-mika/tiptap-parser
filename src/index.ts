@@ -1,8 +1,5 @@
 export {
-  default as parseHtml,
-  type HtmlCodeParserOptions,
+  default as TiptapParser,
+  type TiptapProps,
+  type ClassNamesProps,
 } from './Parse';
-export {
-  default as HtmlCodeParser,
-  type HtmlCodeParserProps,
-} from './HtmlCodeParser';
