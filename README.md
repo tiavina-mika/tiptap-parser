@@ -2,7 +2,7 @@
 
 <p  align="center">
 
-<b>tiptap-parser</b>: HTML parser for Tiptap <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
+<b>tiptap-parser</b>: HTML parser for <a href="https://www.npmjs.com/package/mui-tiptap-editor">Tiptap editor</a> build on the of <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
 
 </p>
 
@@ -11,7 +11,9 @@
 
 <details>
 
+- [Motivation](#motivation)
 - [Installation](#installation)
+- [Demo](#demo)
 
 - [Get started](#get-started)
 
@@ -23,8 +25,13 @@
 
 </details>
 
-## Demo
+## Motivation
+Tiptap editor is a text editor used mainly for blogging, and therefore in the back office.
+<br />The problem is that if it's just to display the content (for example in a Next.js website), it is overkill to install <a href="https://tiptap.dev/">Tiptap</a> or <a href="https://www.npmjs.com/package/mui-tiptap-editor">mui-tiptap editor</a> (and the whole MUI library).
+<br />The purpose of this library is precisely to display the contents of mui-tiptap-editor which is an html saved as text.
+If you are using a dev oriented blog like Medium, this library is for you.
 
+## Demo
 Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/tiptap-parser-demo)**
 
 <img alt="Screenshot" src="https://github.com/tiavina-mika/mui-tiptap-editor/blob/main/screenshots/screenshot.png" />
