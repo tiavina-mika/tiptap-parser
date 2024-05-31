@@ -1,6 +1,6 @@
 {
   "name": "tiptap-parser",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "HTML parser to React component built on the top of html-react-parser with code syntax highlighting",
   "keywords": [
     "tiptap",
