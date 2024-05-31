@@ -1,18 +1,19 @@
 {
   "name": "tiptap-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "HTML parser to React component built on the top of html-react-parser with code syntax highlighting",
   "keywords": [
     "tiptap",
     "prosemirror",
     "rich text editor",
-    "react text editor",
+    "react",
     "wysiwyg",
     "quill",
     "draftjs",
     "slate",
+    "lowlight",
+    "highlight",
     "html string to react",
-    "html-react-parser",
     "code editor"
   ],
   "homepage": "https://github.com/tiavina-mika/tiptap-parser",

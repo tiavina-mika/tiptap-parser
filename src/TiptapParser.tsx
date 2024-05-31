@@ -110,13 +110,30 @@ const parseHtml = (
 }
 
 // ------------------------------ //
-// ----- use it as component ---- //
+// ---------- main props -------- //
 // ------------------------------ //
 export type TiptapProps = {
+  /**
+   * the stringified html content to be parsed
+   */
   children: string;
+  /**
+   * object that contains the class names for the html tags
+   */
   classNames?: ClassNamesProps;
+  /**
+   * the programming language of the code snippets to be highlighted
+   * default: `javascript`
+   * see all available languages here: https://highlightjs.org/examples
+   */
   language?: string;
+  /**
+   * the class name of the container div
+   */
   containerClassName?: string;
+  /**
+   * HTMLReactParserOptions: the options of the `html-react-parser` library
+   */
 } & HTMLReactParserOptions;
 const TiptapParser = ({ classNames, containerClassName, language, children, ...rest }: TiptapProps) => {
   return (

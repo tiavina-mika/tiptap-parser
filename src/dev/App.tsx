@@ -1,4 +1,4 @@
-import TiptapParser from "../Parse";
+import TiptapParser from "../TiptapParser";
 
 const html = `
 <h1>Here is an exemple of code</h1>

@@ -71,15 +71,11 @@ function App() {
 #### Content with code
 
 ```tsx
-const html = `<><h1>Hello there</h1><code>console.log("Log something here")</code></>`;
+const html = `<><h1>Hello there</h1><pre><code>console.log("Log something here")</code></pre></>`;
 
-function App() {
-  return (
-    <TiptapParser language="typescript">
-      {html}
-    </TiptapParser>
-  );
-}
+<TiptapParser language="typescript">
+  {html}
+</TiptapParser>
 ```
 
 #### Customization
@@ -88,6 +84,7 @@ function App() {
 const html = `<p><h1>Hello there</h1></p>`;
 
 <TiptapParser
+  containerClassName="bg-gray-100"
   classNames={{
     codeClassName: 'p-6',
     h1ClassName: 'text-xl',
@@ -124,6 +121,8 @@ const html = `<p><h1>Hello there</h1></p>`;
 |aClassName|`string`|empty| class name of a element
 |tableClassName|`string`|empty| class name of table element
 |imageClassName|`string`|empty| class name of image element
+|other props|`HTMLReactParserOptions`|empty| [all html-react-parser props](https://www.npmjs.com/package/html-react-parser)
+
 
 ## Contributing
 
