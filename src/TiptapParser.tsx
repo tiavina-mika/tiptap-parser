@@ -8,7 +8,6 @@
  * https://medium.com/@hizacharylee/simplify-syntax-highlighting-with-highlight-js-b65af3bdc509 (custom css theme, not used here)
  *
  */
-import { Fragment } from 'react';
 import parse, { HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact } from 'html-react-parser';
 import { common, createLowlight } from 'lowlight'
 import { toHtml } from 'hast-util-to-html'
@@ -106,12 +105,7 @@ const parseHtml = (
   * If the `<code>` tag is not found in the html string content
   * it means that there are no code snippets to be highlighted.
   */
-  return (
-    <Fragment>
-      {parse(text, { ...defaultOptions, ...options })}
-    </Fragment>
-  );
-
+  return parse(text, { ...defaultOptions, ...options });
 }
 
 // ------------------------------ //

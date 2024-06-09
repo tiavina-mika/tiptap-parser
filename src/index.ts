@@ -1,5 +1,6 @@
+import TiptapParser from './TiptapParser';
+
 export {
-  default as TiptapParser,
   type TiptapProps,
   type ClassNamesProps
 } from './TiptapParser';
@@ -7,3 +8,5 @@ export {
 export {
   type HTMLReactParserOptions
 } from 'html-react-parser';
+
+export default TiptapParser;
