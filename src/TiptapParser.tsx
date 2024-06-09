@@ -8,11 +8,12 @@
  * https://medium.com/@hizacharylee/simplify-syntax-highlighting-with-highlight-js-b65af3bdc509 (custom css theme, not used here)
  *
  */
-import './index.css';
+import React from 'react';
 import parse, { HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact } from 'html-react-parser';
 import { common, createLowlight } from 'lowlight'
 import { toHtml } from 'hast-util-to-html'
 import { ElementType } from 'react';
+import './index.css';
 
 const lowlight = createLowlight(common);
 
@@ -116,7 +117,7 @@ export type TiptapProps = {
   /**
    * the stringified html content to be parsed
    */
-  children: string;
+  content: string;
   /**
    * object that contains the class names for the html tags
    */
@@ -135,10 +136,10 @@ export type TiptapProps = {
    * HTMLReactParserOptions: the options of the `html-react-parser` library
    */
 } & HTMLReactParserOptions;
-const TiptapParser = ({ classNames, containerClassName, language, children, ...rest }: TiptapProps) => {
+const TiptapParser = ({ classNames, containerClassName, language, content, ...rest }: TiptapProps) => {
   return (
     <div className={containerClassName}>
-      {parseHtml(children, classNames, language, rest)}
+      {parseHtml(content, classNames, language, rest)}
     </div>
   )
 }

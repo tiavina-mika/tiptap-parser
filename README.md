@@ -11,21 +11,22 @@
 
 <details>
 
-- [Motivation](#motivation)
-- [Installation](#installation)
-- [Demo](#demo)
-
-- [Get started](#get-started)
-
-- [Customization](#customization)
-
-- [Props](#props)
-
-- [Contributing](#contributing)
+- [tiptap-parser](#tiptap-parser)
+  - [Table of Contents](#table-of-contents)
+  - [Use case](#use-case)
+  - [Demo](#demo)
+  - [Installation](#installation)
+  - [Get started](#get-started)
+      - [Simple usage](#simple-usage)
+      - [Content with code](#content-with-code)
+      - [Customization](#customization)
+  - [Props](#props)
+    - [classNames Props](#classnames-props)
+  - [Contributing](#contributing)
 
 </details>
 
-## Motivation
+## Use case
 Tiptap editor is a text editor used mainly for blogging, and therefore in the back office.
 <br />The problem is that if it's just to display the content (for example in a Next.js website), it is overkill to install <a href="https://tiptap.dev/">Tiptap</a> or <a href="https://www.npmjs.com/package/mui-tiptap-editor">mui-tiptap editor</a> (and the whole MUI library).
 <br />The purpose of this library is precisely to display the contents of mui-tiptap-editor which is an html saved as text.
@@ -61,9 +62,7 @@ const html = `<h1>Hello world</h1>`;
 
 function App() {
   return (
-    <TiptapParser>
-      {html}
-    </TiptapParser>
+    <TiptapParser content={html} />
   );
 }
 ```
@@ -73,9 +72,7 @@ function App() {
 ```tsx
 const html = `<><h1>Hello there</h1><pre><code>console.log("Log something here")</code></pre></>`;
 
-<TiptapParser language="typescript">
-  {html}
-</TiptapParser>
+<TiptapParser content={html} language="typescript" />
 ```
 
 #### Customization
@@ -91,18 +88,18 @@ const html = `<p><h1>Hello there</h1></p>`;
     aClassName: 'underline',
     pClassName: 'text-gray-400'
   }}
+  content={html}
 />
-  {html}
-</TiptapParser>
 ```
 
 ## Props
 
 |props |type                          | Default value                         | Description |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
+|content|`string`|empty| html string to be displayed
 |containerClassName|`string`|empty| styles of the container
 |classNames|`ClassNameProps`|empty| class names of each element withing the container
-|language|`string`|empty| language of the code. [see the list](https://github.com/wooorm/lowlight?tab=readme-ov-file#data)
+|language|`string`|javascript| language of the code. [see the list](https://github.com/wooorm/lowlight?tab=readme-ov-file#data)
 
 ### classNames Props
 |props |type                          | Default value                         | Description |

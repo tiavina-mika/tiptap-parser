@@ -40,9 +40,7 @@ export default NotFound;
 
 const App = () => {
   return (
-    <TiptapParser language="tsx" classNames={{ h1ClassName: 'h1'}}>
-      {html}
-    </TiptapParser>
+    <TiptapParser content={html} language="tsx" classNames={{ h1ClassName: 'h1'}} />
   )
 }
 
