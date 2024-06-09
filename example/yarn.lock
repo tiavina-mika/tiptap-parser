@@ -1228,7 +1228,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     tailwindcss: "npm:^3.4.3"
-    tiptap-parser: "npm:^0.0.5"
+    tiptap-parser: "npm:^0.0.6"
     typescript: "npm:^5.2.2"
     vite: "npm:5.0.8"
     vite-tsconfig-paths: "npm:^4.3.1"
@@ -5356,9 +5356,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tiptap-parser@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "tiptap-parser@npm:0.0.5"
+"tiptap-parser@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "tiptap-parser@npm:0.0.6"
   dependencies:
     hast-util-to-html: "npm:^9.0.1"
     html-react-parser: "npm:^5.1.10"
@@ -5366,7 +5366,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.2 || ^18.2.0
     react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0
-  checksum: 10c0/ae7b771061b5929fc7f9cb3fb62e4f836ae83fcaf1e4a4868e1b9f2d3df1627adb71e5b115c4037abd8d35e8d8eb4183b2104ab57798fbe32dd4c1512087f065
+  checksum: 10c0/4acb5616751e1fb03c82c264f9515aaf3d14a44b9ea85a5de2838bc5227975ed3c280c773d6373fa7a50d01861fb976a696fbebaf4205576471fdd3eda2f9c92
   languageName: node
   linkType: hard
 
