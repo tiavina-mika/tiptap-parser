@@ -19,8 +19,8 @@ jobs:
       # see: https://github.com/hmarr/auto-approve-action
       - uses: hmarr/auto-approve-action@v4
         with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          # github-token: ${{ secrets.GH_PR_TOKEN }}
+          # github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_PR_TOKEN }}
 
   merge_pr_branch:
     name: Merge PR branch
