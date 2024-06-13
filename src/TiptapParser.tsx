@@ -60,7 +60,7 @@ const parseHtml = (
      * @param domProps
      * @returns
      */
-    replace(domProps: DOMNode) {
+    replace: (domProps: DOMNode) => {
       const { name, children, attribs } = domProps as Element;
       const Component = name as ElementType;
 
