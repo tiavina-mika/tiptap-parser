@@ -12,14 +12,15 @@ jobs:
     name: Approve PR branch
     runs-on: ubuntu-latest
     permissions:
+      repository-projects: write
       pull-requests: write
       contents: write
     steps:
       # Automatically approve GitHub pull requests.
       # see: https://github.com/hmarr/auto-approve-action
       - uses: hmarr/auto-approve-action@v4
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
+        # with:
+          # github-token: ${{ secrets.GH_TOKEN }}
           # github-token: ${{ secrets.GH_PR_TOKEN }}
 
   merge_pr_branch:
