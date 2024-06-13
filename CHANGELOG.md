@@ -1,7 +1,7 @@
-## 0.0.9 (2024-06-13)
+## 0.0.10 (2024-06-13)
 
 
 ### Bug Fixes
 
-* trigger actions ([90b768b](https://github.com/tiavina-mika/tiptap-parser/commit/90b768b578b947a7ddae2a89dbe0b46c25f9cfa9))
+* workflow ([fc0ea71](https://github.com/tiavina-mika/tiptap-parser/commit/fc0ea712bbed302d66942d46d087134c1077e24d))
 
