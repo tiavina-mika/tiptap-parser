@@ -111,8 +111,5 @@
     "vite": "5.0.8",
     "vite-tsconfig-paths": "^4.3.1"
   },
-  "resolutions": {
-    "@typescript-eslint/typescript-estree": "^5.59.2"
-  },
   "packageManager": "yarn@4.2.1"
 }
