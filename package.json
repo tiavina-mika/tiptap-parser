@@ -57,7 +57,7 @@
     "md-link:check": "markdown-link-check -v -p README.md -v -p CONTRIBUTING.md -v -p .github/**/*.md -c .markdown-link-check-config.json",
     "spell:check": "cspell \"{README.md,CONTRIBUTING.md,.github/*.md}\"",
     "visualize": "npx vite-bundle-visualizer",
-    "publish": "yarn build && yarn npm publish && yarn example",
+    "publish": "yarn build && yarn npm publish",
     "copy-files": "copyfiles -u 1 src/*.css dist/",
     "copy-files-esm": "copyfiles -u 1 src/*.css dist/esm",
     "clean-cache": "yarn cache clean --all",
