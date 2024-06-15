@@ -1,11 +1,11 @@
 # tiptap-parser
 
-<p  align="center">
-
-<b>tiptap-parser</b>: HTML parser for <a href="https://www.npmjs.com/package/mui-tiptap-editor">Tiptap editor</a> build on the of <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
-
+<p  align="left">
+ HTML parser for <a href="https://www.npmjs.com/package/mui-tiptap-editor">Tiptap editor</a> build on the of <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
 </p>
 
+<!-- [START BADGES] -->
+<!-- [END BADGES] -->
 
 ## Table of Contents
 
@@ -41,13 +41,13 @@ Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/githu
 
 ```shell
 
-npm  install  tiptap-parser
+npm install tiptap-parser
 
 ```
 or
 ```shell
 
-yarn  add  tiptap-parser
+yarn add tiptap-parser
 ```
 
 

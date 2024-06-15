@@ -12,8 +12,8 @@ on:
   # issue: https://github.com/orgs/community/discussions/25281
   # see: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
   workflow_run:
-    # the workflow we want to trigger this workflow (see .github/workflows/automerge.yml)
-    workflows: [Approve PR and delete branch]
+    # the workflow we want to trigger this workflow (see .github/workflows/add-badges.yml)
+    workflows: [Add Badges]
     types: [completed]
   # run on release creation
   #   release:
@@ -50,3 +50,5 @@ jobs:
         run: yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          
+      - run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
