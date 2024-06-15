@@ -47,7 +47,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v5
         id: changelog
         with:
-          preset: 'angular'
+          preset: 'conventionalcommits'
           github-token: ${{ secrets.GH_TOKEN }}
           git-user-name: "github-actions[bot]"
           git-user-email: "github-actions[bot]@users.noreply.github.com"
@@ -59,7 +59,7 @@ jobs:
           version-file: './package.json'
           create-summary: true
           git-message: |
-            feat: Test
+            feat!: Test
 
             BREAKING CHANGE: Test
 
