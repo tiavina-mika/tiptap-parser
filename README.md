@@ -5,6 +5,9 @@
 </p>
 
 <!-- [START BADGES] -->
+<!-- Please keep comment here to allow auto update -->
+[![NPM Version](https://img.shields.io/npm/v/tiptap-parser?style=flat-square)](https://www.npmjs.com/package/tiptap-parser)
+[![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
 <!-- [END BADGES] -->
 
 ## Table of Contents
