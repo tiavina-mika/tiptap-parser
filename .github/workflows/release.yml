@@ -47,7 +47,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v5
         id: changelog
         with:
-          preset: 'conventionalcommits'
+          preset: 'angular'
           github-token: ${{ secrets.GH_TOKEN }}
           git-user-name: "github-actions[bot]"
           git-user-email: "github-actions[bot]@users.noreply.github.com"
@@ -58,7 +58,6 @@ jobs:
           # and therefore the npm package version
           version-file: './package.json'
           create-summary: true
-          git-message: 'feat: ${{ steps.changelog.outputs.version }}'
 
       # if the changelog is skipped, we do not need to create a PR
       # create a PR with the changelog and the new version
