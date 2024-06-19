@@ -2,7 +2,10 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "colord"
+    "octocat",
+    "automerge",
+    "tiptap",
+    "Tiptap"
   ],
   "flagWords": [],
   "ignorePaths": [

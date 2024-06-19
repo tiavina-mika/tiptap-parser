@@ -24,7 +24,7 @@
       - [Content with code](#content-with-code)
       - [Customization](#customization)
   - [Props](#props)
-    - [classNames Props](#classnames-props)
+  - [Types](#types)
   - [Contributing](#contributing)
 
 </details>
@@ -104,7 +104,7 @@ const html = `<p><h1>Hello there</h1></p>`;
 |classNames|`ClassNameProps`|empty| class names of each element withing the container
 |language|`string`|javascript| language of the code. [see the list](https://github.com/wooorm/lowlight?tab=readme-ov-file#data)
 
-### classNames Props
+## Types
 |props |type                          | Default value                         | Description |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |codeClassName|`string`|empty| class name of code element
