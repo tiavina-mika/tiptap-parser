@@ -1,6 +1,6 @@
 # tiptap-parser
 
-<p  align="left">
+<p align="left">
  HTML parser for <a href="https://www.npmjs.com/package/mui-tiptap-editor">Tiptap editor</a> build on the of <a href="https://www.npmjs.com/package/html-react-parser">html-react-parser</a> with code syntax highlighting.
 </p>
 
@@ -9,25 +9,6 @@
 [![NPM Version](https://img.shields.io/npm/v/tiptap-parser?style=flat-square)](https://www.npmjs.com/package/tiptap-parser)
 [![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
 <!-- [END BADGES] -->
-
-## Table of Contents
-
-<details>
-
-- [tiptap-parser](#tiptap-parser)
-  - [Table of Contents](#table-of-contents)
-  - [Use case](#use-case)
-  - [Demo](#demo)
-  - [Installation](#installation)
-  - [Get started](#get-started)
-      - [Simple usage](#simple-usage)
-      - [Content with code](#content-with-code)
-      - [Customization](#customization)
-  - [Props](#props)
-  - [Types](#types)
-  - [Contributing](#contributing)
-
-</details>
 
 ## Use case
 Tiptap editor is a text editor used mainly for blogging, and therefore in the back office.
@@ -105,6 +86,7 @@ const html = `<p><h1>Hello there</h1></p>`;
 |language|`string`|javascript| language of the code. [see the list](https://github.com/wooorm/lowlight?tab=readme-ov-file#data)
 
 ## Types
+
 |props |type                          | Default value                         | Description |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |codeClassName|`string`|empty| class name of code element
