@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import TiptapParser from './TiptapParser';
 
 export {
@@ -6,7 +7,11 @@ export {
 } from './TiptapParser';
 
 export {
-  type HTMLReactParserOptions
+  parse
+}
+
+export {
+  type HTMLReactParserOptions,
 } from 'html-react-parser';
 
 export default TiptapParser;
