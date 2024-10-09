@@ -9,8 +9,8 @@
  *
  */
 import parse, { HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact } from 'html-react-parser';
-import { common, createLowlight } from 'lowlight'
-import { toHtml } from 'hast-util-to-html'
+import { common, createLowlight } from 'lowlight';
+import { toHtml } from 'hast-util-to-html';
 import { ElementType } from 'react';
 import './index.css';
 import CodeBlockWithCopy from './components/CodeBlockWithCopy';
@@ -109,7 +109,7 @@ const parseHtml = (
           </Component>
         );
       }
-    }
+    },
   };
 
   /*
@@ -117,7 +117,7 @@ const parseHtml = (
   * it means that there are no code snippets to be highlighted.
   */
   return parse(text, { ...defaultOptions, ...options });
-}
+};
 
 // ------------------------------ //
 // ---------- main props -------- //
@@ -151,6 +151,6 @@ const TiptapParser = ({ classNames, containerClassName, language, content, ...re
       {parseHtml(content, classNames, language, rest)}
     </div>
   );
-}
+};
 
 export default TiptapParser;

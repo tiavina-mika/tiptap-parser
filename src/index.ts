@@ -3,12 +3,12 @@ import TiptapParser from './TiptapParser';
 
 export {
   type TiptapProps,
-  type ClassNamesProps
+  type ClassNamesProps,
 } from './TiptapParser';
 
 export {
-  parse
-}
+  parse,
+};
 
 export {
   type HTMLReactParserOptions,

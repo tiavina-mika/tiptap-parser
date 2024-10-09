@@ -9,7 +9,7 @@ module.exports = {
   endOfLine: "lf",
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
   plugins: [
-    '"plugins": ["prettier-plugin-organize-imports"]',
+    "prettier-plugin-organize-imports"
   ],
   printWidth: 80,
   semi: true,
