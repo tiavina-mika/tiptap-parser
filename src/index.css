@@ -11,3 +11,28 @@
 .h1 {
   color: red;
 }
+.pre-container {
+  position: relative;
+}
+.pre-container button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: .25rem;
+ }
+
+.pre-container button svg {
+  width: 1rem;
+ }
