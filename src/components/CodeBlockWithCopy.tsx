@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode, useState } from "react";
 import Check from "./icons/Check";
 import Copy from "./icons/Copy";
@@ -17,7 +19,7 @@ const CodeBlockWithCopy = ({ children }: Props) => {
 
   const copyToClipboard = () => {
     const codeContent = childrenToString(children);
-    
+
     if (!codeContent) return;
     navigator.clipboard.writeText(codeContent).then(() => {
       setCopied(true);
