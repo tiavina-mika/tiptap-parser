@@ -45,7 +45,7 @@ const defaultTheme = {
   components: {
     MuiSwitch: {
       styleOverrides: {
-        root: ({ theme, }: { theme: Theme, ownerState: BadgeProps }) => ({
+        root: ({ theme }: { theme: Theme, ownerState: BadgeProps }) => ({
           width: 38,
           height: 20,
           padding: 0,
@@ -86,7 +86,7 @@ const defaultTheme = {
             boxSizing: 'border-box',
           },
         }),
-      }
+      },
     },
     MuiChip: {
       styleOverrides: {
@@ -114,9 +114,9 @@ const defaultTheme = {
               top: -2,
               left: 0,
               border: `1px solid ${theme.palette.background.paper}`,
-            }
+            };
           }
-        }
+        },
       },
     },
     MuiButton: {
@@ -168,13 +168,13 @@ const defaultTheme = {
       styleOverrides: {
         root: ({ theme }: { theme: Theme }) => ({
           [theme.breakpoints.up('sm')]: {
-            boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'
+            boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
           },
           [theme.breakpoints.down('sm')]: {
-            boxShadow: 'none'
-          }
-        })
-      }
+            boxShadow: 'none',
+          },
+        }),
+      },
     },
     MuiTextField: {
       styleOverrides: {
@@ -182,8 +182,8 @@ const defaultTheme = {
           '& .MuiFormHelperText-root': {
             marginLeft: 0,
           },
-        }
-      }
+        },
+      },
     },
     MuiAutocomplete: {
       styleOverrides: {
@@ -199,12 +199,12 @@ const defaultTheme = {
               },
               '&:not(:last-child)': {
                 borderBottom: '1px solid ' + theme.palette.grey[100] + ' !important',
-              }
+              },
             },
-          }
+          },
         }),
-      }
-    }
+      },
+    },
   },
 };
 

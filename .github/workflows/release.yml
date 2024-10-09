@@ -19,8 +19,33 @@ env:
   APP_NAME: tiptap-parser
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # need this for using yarn v4
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
   changelog:
     name: Changelog
+    needs:
+      - lint
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
 
