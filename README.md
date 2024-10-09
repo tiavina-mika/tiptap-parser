@@ -11,10 +11,9 @@
 <!-- [END BADGES] -->
 
 ## Use case
-Tiptap editor is a text editor used mainly for blogging, and therefore in the back office.
-<br />The problem is that if it's just to display the content (for example in a Next.js website), it is overkill to install <a href="https://tiptap.dev/">Tiptap</a> or <a href="https://www.npmjs.com/package/mui-tiptap-editor">mui-tiptap editor</a> (and the whole MUI library).
-<br />The purpose of this library is precisely to display the contents of mui-tiptap-editor which is an html saved as text.
-If you are using a dev oriented blog like Medium, this library is for you.
+The Tiptap editor is primarily used as a text editor for blogging, particularly in back-office applications. However, if the goal is simply to display content (for example, on a Next.js website), it may be excessive to install either the <a href="https://tiptap.dev/">Tiptap</a> or <a href="https://www.npmjs.com/package/mui-tiptap-editor">the mui-tiptap-editor</a> along with the entire MUI library.
+
+This library is specifically designed to display the contents of the mui-tiptap-editor, which saves HTML as text. If you're using a developer-oriented blogging platform like Medium, this library is ideal for you.
 
 ## Demo
 Try it yourself in this **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/tiptap-parser-demo)**
