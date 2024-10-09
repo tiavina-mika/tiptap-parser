@@ -5,7 +5,7 @@ import { childrenToString } from "../utils/utils";
 
 /**
  *
- * @param param0
+ * add a copy button to the code block
  * @returns
  */
 type Props = {
@@ -17,6 +17,7 @@ const CodeBlockWithCopy = ({ children }: Props) => {
 
   const copyToClipboard = () => {
     const codeContent = childrenToString(children);
+    
     if (!codeContent) return;
     navigator.clipboard.writeText(codeContent).then(() => {
       setCopied(true);
