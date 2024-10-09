@@ -13,6 +13,7 @@ import { common, createLowlight } from 'lowlight'
 import { toHtml } from 'hast-util-to-html'
 import { ElementType } from 'react';
 import './index.css';
+import CodeBlockWithCopy from './components/CodeBlockWithCopy';
 
 const lowlight = createLowlight(common);
 
@@ -68,19 +69,29 @@ const parseHtml = (
         const props = attributesToProps(attribs);
 
         // do not replace the `<pre>` tag
-        if (name === 'pre') return
-
-        /**
-         * Replace the `<code>` tag with the highlighted code snippet
-         * with the `hljs` class name to apply the highlight theme (see: https://highlightjs.org/examples/)
-         */
-        if (name === 'code') {
-          const codeStr = domToReact(children as DOMNode[]) as string;
-          const tree = lowlight.highlight(language, codeStr);
+        // if (name === 'pre') return
+        if (name === 'pre') {
           return (
-            <code className={`hljs code-container ${codeClassName || ''}`} {...props}>
-              {parse(toHtml(tree))}
-            </code>
+            // pre with the copy button
+            <CodeBlockWithCopy>
+              {domToReact(children as DOMNode[], {
+                replace: (codeNode: any) => {
+                  /**
+                   * Replace the `<code>` tag with the highlighted code snippet
+                   * with the `hljs` class name to apply the highlight theme (see: https://highlightjs.org/examples/)
+                   */
+                  if (codeNode.name === 'code') {
+                    const codeStr = domToReact(codeNode.children as DOMNode[]) as string;
+                    const tree = lowlight.highlight(language, codeStr);
+                    return (
+                      <code className={`hljs code-container ${codeClassName || ''}`} {...props}>
+                        {parse(toHtml(tree))}
+                      </code>
+                    );
+                  }
+                },
+              })}
+            </CodeBlockWithCopy>
           );
         }
 
