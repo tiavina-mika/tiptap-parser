@@ -1,11 +1,11 @@
-import { Children, isValidElement } from "react";
+import { Children, isValidElement, ReactNode } from 'react';
 
 /**
  * transform the children array to a string
  * @param children
  * @returns
  */
-export const childrenToString = (children: React.ReactNode): string => {
+export const childrenToString = (children: ReactNode): string => {
   if (!children) return ''; // Return empty string if no children
   // Using React.Children to map over the children
   const array = Children.map(children, (child) => {
