@@ -8,7 +8,9 @@
  * https://medium.com/@hizacharylee/simplify-syntax-highlighting-with-highlight-js-b65af3bdc509 (custom css theme, not used here)
  *
  */
-import parse, { HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact } from 'html-react-parser';
+import parse, {
+  HTMLReactParserOptions, DOMNode, Element, attributesToProps, domToReact,
+} from 'html-react-parser';
 import { common, createLowlight } from 'lowlight';
 import { toHtml } from 'hast-util-to-html';
 import { ElementType } from 'react';
@@ -68,8 +70,10 @@ const parseHtml = (
       if (name) {
         const props = attributesToProps(attribs);
 
-        // do not replace the `<pre>` tag
-        // if (name === 'pre') return
+        /*
+         * do not replace the `<pre>` tag
+         * if (name === 'pre') return
+         */
         if (name === 'pre') {
           return (
             // pre with the copy button
@@ -83,6 +87,7 @@ const parseHtml = (
                   if (codeNode.name === 'code') {
                     const codeStr = domToReact(codeNode.children as DOMNode[]) as string;
                     const tree = lowlight.highlight(language, codeStr);
+
                     return (
                       <code className={`hljs code-container ${codeClassName || ''}`} {...props}>
                         {parse(toHtml(tree))}
@@ -100,7 +105,7 @@ const parseHtml = (
         }
 
         if (['br', 'hr', 'img'].find((currentName: string) => currentName === name)) {
-            return <Component {...props} />;
+          return <Component {...props} />;
         }
 
         return (
@@ -113,15 +118,17 @@ const parseHtml = (
   };
 
   /*
-  * If the `<code>` tag is not found in the html string content
-  * it means that there are no code snippets to be highlighted.
-  */
+   * If the `<code>` tag is not found in the html string content
+   * it means that there are no code snippets to be highlighted.
+   */
   return parse(text, { ...defaultOptions, ...options });
 };
 
-// ------------------------------ //
-// ---------- main props -------- //
-// ------------------------------ //
+/*
+ * ------------------------------ //
+ * ---------- main props -------- //
+ * ------------------------------ //
+ */
 export type TiptapProps = {
   /**
    * the stringified html content to be parsed
@@ -145,7 +152,9 @@ export type TiptapProps = {
    * HTMLReactParserOptions: the options of the `html-react-parser` library
    */
 } & HTMLReactParserOptions;
-const TiptapParser = ({ classNames, containerClassName, language, content, ...rest }: TiptapProps) => {
+const TiptapParser = ({
+  classNames, containerClassName, language, content, ...rest
+}: TiptapProps) => {
   return (
     <div className={containerClassName}>
       {parseHtml(content, classNames, language, rest)}

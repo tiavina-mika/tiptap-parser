@@ -1,9 +1,9 @@
 'use client';
 
-import { ReactNode, useState } from "react";
-import Check from "./icons/Check";
-import Copy from "./icons/Copy";
-import { childrenToString } from "../utils/utils";
+import { ReactNode, useState } from 'react';
+import Check from './icons/Check';
+import Copy from './icons/Copy';
+import { childrenToString } from '../utils/utils';
 
 /**
  *
@@ -15,15 +15,15 @@ type Props = {
 };
 
 const CodeBlockWithCopy = ({ children }: Props) => {
-  const [copied, setCopied] = useState<boolean>(false);
+  const [isCopied, setIsCopied] = useState<boolean>(false);
 
   const copyToClipboard = () => {
     const codeContent = childrenToString(children);
 
     if (!codeContent) return;
     navigator.clipboard.writeText(codeContent).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // "Copied!" message for 2 seconds
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000); // "Copied!" message for 2 seconds
     });
   };
 
@@ -33,7 +33,7 @@ const CodeBlockWithCopy = ({ children }: Props) => {
         type="button"
         onClick={copyToClipboard}
       >
-        {copied ? <Check /> : <Copy />}
+        {isCopied ? <Check /> : <Copy />}
       </button>
       <pre>{children}</pre>
     </div>

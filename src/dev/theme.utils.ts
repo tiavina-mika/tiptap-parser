@@ -1,4 +1,6 @@
-import { BadgeProps, PaletteMode, PaletteOptions, Theme, createTheme } from '@mui/material';
+import {
+  BadgeProps, PaletteMode, PaletteOptions, Theme, createTheme,
+} from '@mui/material';
 import { grey, teal } from '@mui/material/colors';
 
 export const DASHBOARD_BACKGROUND_COLOR = '#FAFBFB';
@@ -45,7 +47,7 @@ const defaultTheme = {
   components: {
     MuiSwitch: {
       styleOverrides: {
-        root: ({ theme }: { theme: Theme, ownerState: BadgeProps }) => ({
+        root: ({ theme }: { theme: Theme; ownerState: BadgeProps }) => ({
           width: 38,
           height: 20,
           padding: 0,
@@ -107,7 +109,7 @@ const defaultTheme = {
     },
     MuiBadge: {
       styleOverrides: {
-        badge: ({ theme, ownerState }: { theme: Theme, ownerState: BadgeProps }) => {
+        badge: ({ theme, ownerState }: { theme: Theme; ownerState: BadgeProps }) => {
           if (ownerState.overlap === 'rectangular') {
             return {
               color: '#fff',
@@ -145,8 +147,10 @@ const defaultTheme = {
       defaultProps: {
         useFlexGap: true,
       },
-      // mui stack has no, so overrides in the variants instead
-      // ISSUE: https://stackoverflow.com/questions/72382224/styleoverrides-not-being-applied-with-styled-components-in-mui
+      /*
+       * mui stack has no, so overrides in the variants instead
+       * ISSUE: https://stackoverflow.com/questions/72382224/styleoverrides-not-being-applied-with-styled-components-in-mui
+       */
       variants: [
         {
           props: {},
